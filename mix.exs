@@ -1,11 +1,12 @@
 defmodule WeChat.MixProject do
   use Mix.Project
 
-  @source_url "https://github.com/edragonconnect/elixir_wechat"
+  @source_url "https://github.com/jolee2014/elixir_wechat_fork"
+  @homepage_url "https://github.com/jolee2014/elixir_wechat_fork"
 
   def project do
     [
-      app: :elixir_wechat,
+      app: :elixir_wechat_fork,
       version: "0.5.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
@@ -13,7 +14,9 @@ defmodule WeChat.MixProject do
       deps: deps(),
       docs: docs(),
       description: description(),
-      package: package()
+      package: package(),
+      source_url: @source_url,
+      homepage_url: @homepage_url
     ]
   end
 
@@ -85,15 +88,21 @@ defmodule WeChat.MixProject do
   end
 
   defp description() do
-    "WeChat SDK for Elixir"
+    "WeChat SDK for Elixir. Community-maintained fork of elixir_wechat, 
+    created to keep compatibility and updates after the original project became inactive."
   end
 
   defp package do
     [
+      name: "elixir_wechat_fork",
       files: ["lib", "mix.exs", "README.md", "LICENSE.md"],
-      maintainers: ["Xin Zou", "Kevin Pan"],
+      maintainers: ["jolee2014"],
       licenses: ["MIT"],
-      links: %{"GitHub" => @source_url}
+      links: %{
+        "GitHub" => @source_url,
+        "Original Project" => "https://github.com/edragonconnect/elixir_wechat",
+        "Changelog" => "#{@source_url}/blob/main/CHANGELOG.md"
+      },
     ]
   end
 end

@@ -1,6 +1,7 @@
 # The MIT License (MIT)
 
 ## Copyright (c) 2019 eDragonConnect
+## Copyright (c) 2026 jolee2014 (fork maintainer)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

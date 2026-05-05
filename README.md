@@ -1,9 +1,9 @@
 # ElixirWeChat
 
-[![hex.pm](https://img.shields.io/hexpm/v/elixir_wechat.svg)](https://hex.pm/packages/elixir_wechat)
-[![hex.pm](https://img.shields.io/hexpm/dt/elixir_wechat.svg)](https://hex.pm/packages/elixir_wechat)
-[![hex.pm](https://img.shields.io/hexpm/l/elixir_wechat.svg)](https://hex.pm/packages/elixir_wechat)
-[![github.com](https://img.shields.io/github/last-commit/edragonconnect/elixir_wechat.svg)](https://github.com/edragonconnect/elixir_wechat)
+[![hex.pm](https://img.shields.io/hexpm/v/elixir_wechat_fork.svg)](https://hex.pm/packages/elixir_wechat_fork)
+[![hex.pm](https://img.shields.io/hexpm/dt/elixir_wechat_fork.svg)](https://hex.pm/packages/elixir_wechat_fork)
+[![hex.pm](https://img.shields.io/hexpm/l/elixir_wechat_fork.svg)](https://hex.pm/packages/elixir_wechat_fork)
+[![github.com](https://img.shields.io/github/last-commit/jolee2014/elixir_wechat_fork.svg)](https://github.com/jolee2014/elixir_wechat_fork)
 
 Elixir API wrapper for [WeChat](https://www.wechat.com/).
 
@@ -51,7 +51,7 @@ Notice:
 ```elixir
 def deps do
   [
-    {:elixir_wechat, "~> 0.5"}
+    {:elixir_wechat_fork, "~> 0.5"}
   ]
 end
 ```
@@ -62,7 +62,7 @@ Currently, this library uses `Tesla.Adapter.Finch` to process http request/respo
 default pool setting like this:
 
 ```
-config :elixir_wechat,
+config :elixir_wechat_fork,
   pool_size: 100,
   pool_count: 1
 ```
