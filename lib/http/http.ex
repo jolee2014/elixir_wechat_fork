@@ -1,17 +1,15 @@
 defmodule WeChat.Http do
   @moduledoc false
-  use Tesla
 
   require Logger
 
   alias WeChat.{Application, Error}
 
-  plug(Tesla.Middleware.Logger)
-
   @spec client(request :: WeChat.Request.t()) :: term()
   def client(request) do
     Tesla.client(
       [
+        Tesla.Middleware.Logger,
         {Tesla.Middleware.Retry,
          delay: 500, max_retries: 10, should_retry: &match_should_retry?/1},
         {WeChat.Http.Middleware.Common, request}
@@ -24,6 +22,7 @@ defmodule WeChat.Http do
   def component_client(request) do
     Tesla.client(
       [
+        Tesla.Middleware.Logger,
         {Tesla.Middleware.Retry,
          delay: 500, max_retries: 10, should_retry: &match_should_retry?/1},
         {WeChat.Http.Middleware.Component, request}

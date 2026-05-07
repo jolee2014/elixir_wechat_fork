@@ -507,7 +507,7 @@ defmodule WeChat do
       opts: request.opts
     ]
 
-    Http.request(client, options)
+    Tesla.request(client, options)
   end
 
   defp ensure_implements(module, available_adapter_storage_behaviours)

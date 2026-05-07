@@ -32,11 +32,11 @@ defmodule WeChat.MixProject do
 
   defp deps do
     [
-      {:tesla, "~> 1.9"},
+      {:tesla, "~> 1.17"},
       {:finch, "~> 0.19"},
       {:jason, "~> 1.4"},
       {:decorator, "~> 1.4"},
-      {:plug, "~> 1.16", optional: true},
+      {:plug, "~> 1.19", optional: true},
       {:mock, "~> 0.3", only: :test},
       {:ex_doc, "~> 0.34", only: [:docs, :dev], runtime: false}
     ]
