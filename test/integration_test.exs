@@ -1,8 +1,18 @@
 defmodule WeChat.IntegrationTest do
   use ExUnit.Case
 
-  @common_appid System.fetch_env!("TEST_COMMON_APPID")
-  @test_openid System.fetch_env!("TEST_OPENID")
+  @moduletag :integration
+
+  @common_appid System.get_env("TEST_COMMON_APPID")
+  @test_openid System.get_env("TEST_OPENID")
+
+  setup_all do
+    if @common_appid == nil or @test_openid == nil do
+      {:skip, "TEST_COMMON_APPID and TEST_OPENID env vars required for integration tests"}
+    else
+      :ok
+    end
+  end
 
   defp get_user_info(openid \\ @test_openid) do
     query = [openid: openid]

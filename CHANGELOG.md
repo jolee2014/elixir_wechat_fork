@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.1 (2026-05-06)
+
+* Feat: upgrade plug and tesla
+
 ## v0.5.0 (2026-05-05)
 
 * Raise minimum Elixir requirement to `~> 1.14`
