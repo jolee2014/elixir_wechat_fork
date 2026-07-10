@@ -7,7 +7,7 @@ defmodule WeChat.MixProject do
   def project do
     [
       app: :elixir_wechat_fork,
-      version: "0.5.1",
+      version: "0.5.2",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -36,7 +36,7 @@ defmodule WeChat.MixProject do
       {:finch, "~> 0.19"},
       {:jason, "~> 1.4"},
       {:decorator, "~> 1.4"},
-      {:plug, "~> 1.19", optional: true},
+      {:plug, "~> 1.20", optional: true},
       {:mock, "~> 0.3", only: :test},
       {:ex_doc, "~> 0.34", only: [:docs, :dev], runtime: false}
     ]
