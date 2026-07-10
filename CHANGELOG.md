@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.2 (2026-07-10)
+
+* Feat: upgrade plug
+
 ## v0.5.1 (2026-05-06)
 
 * Feat: upgrade plug and tesla
