@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.5.3 (2026-08-21)
+
+* Feat: upgrade mint
+
 ## v0.5.2 (2026-07-10)
 
 * Feat: upgrade plug
